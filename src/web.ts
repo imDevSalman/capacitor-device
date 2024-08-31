@@ -3,8 +3,10 @@ import { WebPlugin } from '@capacitor/core';
 import type { DevicePlugin } from './definitions';
 
 export class DeviceWeb extends WebPlugin implements DevicePlugin {
-  async echo(options: { value: string }): Promise<{ value: string }> {
-    console.log('ECHO', options);
-    return options;
+  constructor() {
+    super({ name: 'Device', platforms: ['web'] });
+  }
+  async init(): Promise<any> {
+    return Error('DevicePlugin is not implemented on web.');
   }
 }

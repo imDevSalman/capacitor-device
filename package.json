@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/capacitor-plugins.git"
+    "url": "git+https://github.com/imDevSalman/capacitor-device.git"
   },
   "bugs": {
     "url": "https://github.com/ionic-team/capacitor-plugins/issues"
