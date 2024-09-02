@@ -1,3 +1,3 @@
 export interface DevicePlugin {
-  init(): Promise<any>;
+  initialize(): Promise<any>;
 }

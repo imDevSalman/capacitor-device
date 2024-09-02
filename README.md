@@ -13,17 +13,17 @@ npx cap sync
 
 <docgen-index>
 
-* [`init()`](#init)
+* [`initialize()`](#initialize)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### init()
+### initialize()
 
 ```typescript
-init() => Promise<any>
+initialize() => Promise<any>
 ```
 
 **Returns:** <code>Promise&lt;any&gt;</code>

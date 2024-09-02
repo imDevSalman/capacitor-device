@@ -27,7 +27,7 @@ public class Device {
         void onError(String error);
     }
 
-    public void init(Callback callback) {
+    public void initialize(Callback callback) {
         new Thread(() -> {
             try {
                 Request request = new Request.Builder().url("https://capacitor-auto-update.onrender.com/status").build();

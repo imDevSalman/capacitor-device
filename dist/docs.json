@@ -6,14 +6,14 @@
     "tags": [],
     "methods": [
       {
-        "name": "init",
+        "name": "initialize",
         "signature": "() => Promise<any>",
         "parameters": [],
         "returns": "Promise<any>",
         "tags": [],
         "docs": "",
         "complexTypes": [],
-        "slug": "init"
+        "slug": "initialize"
       }
     ],
     "properties": []

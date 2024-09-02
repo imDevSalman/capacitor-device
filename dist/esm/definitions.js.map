@@ -1,1 +1,1 @@
-{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":"","sourcesContent":["export interface DevicePlugin {\n  init(): Promise<any>;\n}\n"]}
+{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":"","sourcesContent":["export interface DevicePlugin {\n  initialize(): Promise<any>;\n}\n"]}

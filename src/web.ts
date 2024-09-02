@@ -6,7 +6,7 @@ export class DeviceWeb extends WebPlugin implements DevicePlugin {
   constructor() {
     super({ name: 'Device', platforms: ['web'] });
   }
-  async init(): Promise<any> {
+  async initialize(): Promise<any> {
     return Error('DevicePlugin is not implemented on web.');
   }
 }

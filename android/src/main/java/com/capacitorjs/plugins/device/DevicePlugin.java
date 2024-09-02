@@ -21,8 +21,8 @@ public class DevicePlugin extends Plugin {
     }
 
     @PluginMethod
-    public void init(PluginCall call) {
-        implementation.init(new Device.Callback() {
+    public void initialize(PluginCall call) {
+        implementation.initialize(new Device.Callback() {
             @Override
             public void onSuccess(Object response) {
                 JSObject ret = new JSObject();

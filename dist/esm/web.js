@@ -3,7 +3,7 @@ export class DeviceWeb extends WebPlugin {
     constructor() {
         super({ name: 'Device', platforms: ['web'] });
     }
-    async init() {
+    async initialize() {
         return Error('DevicePlugin is not implemented on web.');
     }
 }
