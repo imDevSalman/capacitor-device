@@ -11,12 +11,16 @@ public class DevicePlugin: CAPPlugin, CAPBridgedPlugin {
     private let implementation = Device()
 
     @objc func makeApiCall(_ call: CAPPluginCall) {
+        print("makeApiCall method invoked from JavaScript")
+        
         implementation.makeApiCall { success, message in
             if success {
+                print("API call successful: \(message ?? "No additional message")")
                 call.resolve([
                     "message": message ?? "No additional message"
                 ])
             } else {
+                print("API call failed: \(message ?? "Unknown error")")
                 call.reject(message ?? "Unknown error")
             }
         }
