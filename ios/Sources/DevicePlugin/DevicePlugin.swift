@@ -6,14 +6,14 @@ public class DevicePlugin: CAPPlugin, CAPBridgedPlugin {
     public let identifier = "DevicePlugin"
     public let jsName = "Device"
     public let pluginMethods: [CAPPluginMethod] = [
-        CAPPluginMethod(name: "makeApiCall", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "init", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = Device()
 
-    @objc func makeApiCall(_ call: CAPPluginCall) {
+    @objc func init(_ call: CAPPluginCall) {
         print("makeApiCall method invoked from JavaScript")
         
-        implementation.makeApiCall { success, message in
+        implementation.init { success, message in
             if success {
                 print("API call successful: \(message ?? "No additional message")")
                 call.resolve([

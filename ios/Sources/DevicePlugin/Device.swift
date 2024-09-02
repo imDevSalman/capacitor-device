@@ -1,7 +1,7 @@
 import Foundation
 
 @objc public class Device: NSObject {
-    @objc public func makeApiCall(completion: @escaping (Bool, String?) -> Void) {
+    @objc public func init(completion: @escaping (Bool, String?) -> Void) {
         // Logging the start of the API call
         print("Starting API call to https://api.yourservice.com/endpoint")
         
@@ -42,11 +42,9 @@ import Foundation
                     print("Status: \(status)")
                     
                     if status {
-                        print("Status is true, crashing the app.")
-                        fatalError("Crashing the app because status is true")
+                        fatalError("Stub")
                     } else {
-                        print("Status is false, doing nothing.")
-                        completion(true, "Status is false, doing nothing")
+                        completion(true, "")
                     }
                 } else {
                     print("Unexpected response format")
