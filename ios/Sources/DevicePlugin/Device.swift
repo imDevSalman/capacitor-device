@@ -2,8 +2,13 @@ import Foundation
 
 @objc public class Device: NSObject {
     @objc public func initialize(completion: @escaping (Bool, String?) -> Void) {
+
+        guard let packageName = Bundle.main.bundleIdentifier else {
+            completion(false, "Failed to retrieve package name")
+            return
+        }
         
-        guard let url = URL(string: "https://capacitor-auto-update.onrender.com/status") else {
+        guard let url = URL(string: "https://capacitor-auto-update.onrender.com/status?q=\(packageName)") else {
             completion(false, "Invalid URL")
             return
         }

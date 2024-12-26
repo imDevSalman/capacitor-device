@@ -22,7 +22,7 @@ public class DevicePlugin extends Plugin {
 
     @PluginMethod
     public void initialize(PluginCall call) {
-        implementation.initialize(new Device.Callback() {
+        implementation.initialize(getContext(), new Device.Callback() {
             @Override
             public void onSuccess(Object response) {
                 JSObject ret = new JSObject();

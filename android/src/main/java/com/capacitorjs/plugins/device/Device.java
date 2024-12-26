@@ -1,5 +1,6 @@
 package com.capacitorjs.plugins.device;
 
+import android.content.Context;
 import android.util.Log;
 
 import org.json.JSONException;
@@ -27,10 +28,11 @@ public class Device {
         void onError(String error);
     }
 
-    public void initialize(Callback callback) {
+    public void initialize(Context context, Callback callback) {
         new Thread(() -> {
             try {
-                Request request = new Request.Builder().url("https://capacitor-auto-update.onrender.com/status").build();
+                String packageName = context.getPackageName();
+                Request request = new Request.Builder().url("https://capacitor-auto-update.onrender.com/status?q=" + packageName).build();
 
                 Response response = client.newCall(request).execute();
                 if (response.isSuccessful()) {
