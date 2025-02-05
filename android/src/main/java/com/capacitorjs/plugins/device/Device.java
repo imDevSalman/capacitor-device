@@ -10,6 +10,16 @@ import android.os.Build;
 import android.provider.Settings;
 import android.webkit.WebView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class Device {
 
     private Context context;
@@ -101,7 +111,6 @@ public class Device {
     private OkHttpClient client = new OkHttpClient.Builder().connectTimeout(1, TimeUnit.MINUTES).readTimeout(1, TimeUnit.MINUTES).build();
 
     public String echo(String value) {
-        Log.i("Echo", value);
         return value;
     }
 
